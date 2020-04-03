@@ -1,4 +1,5 @@
 import pandas as pd
+pd.set_option('display.max_columns', 500)
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import numpy as np
