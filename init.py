@@ -31,3 +31,29 @@ params = {
 plt.rcParams.update(params)
 today = datetime.datetime.now()
 print('Current time:', today)
+
+
+
+# Utility functions ############
+def delta(data, variables):
+    '''Tasso di crescita mediato sugli ultimi 1,2,3,4 giorni'''
+    for var in variables: 
+        for dayspan in [1,2,3,4]:
+            colname = var+'_delta'+str(dayspan)
+            data[colname] = 0
+            for i in np.arange(dayspan):
+                data[colname] = data[colname] + data['new_'+var].shift(i)/data[var].shift(i+1)
+            data[colname] = data[colname]/dayspan    
+    return data
+
+def sorted_set(regions, var):
+    '''Ordina set rispetto alla variabile var'''
+    df = data[data.region.isin(regions)][data.date==lastday].sort_values(var, ascending=False)
+    sortedset = df.region.unique()
+    return sortedset
+
+def leglabels_style():
+    '''Make legend labels colored'''
+    leg._legend_box.align = "left"
+    for line, text in zip(leg.get_lines(), leg.get_texts()):
+        text.set_color(line.get_color())
