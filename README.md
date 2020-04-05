@@ -1,5 +1,6 @@
 # COVID19-Monitor
-Tracking and producing insights on COVID-19 data
+Tracking and producing insights on COVID-19 data.
+© Copyright 2020, Pietro Di Gangi
 
 ## International COVID-19 data and plots
 `covid19-international.ipynb`
