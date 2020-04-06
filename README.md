@@ -5,8 +5,8 @@ Tracking and producing insights on COVID-19 data.
 
 ## International COVID-19 data and plots
 `covid19-international.ipynb`
-COVID-19 data source:
-* Johns Hopkins CSSE: https://github.com/CSSEGISandData/COVID-19
+* COVID-19 upstream data source: Johns Hopkins CSSE: https://github.com/CSSEGISandData/COVID-19
+* Downloaded dataset from https://github.com/datasets/covid-19
 
 ## Dati e grafici COVID-19 Italia
 `covid19-italia.ipynb`
