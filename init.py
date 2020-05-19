@@ -27,6 +27,7 @@ params = {
     'ytick.major.pad': 3.5, 'ytick.minor.pad': 3.5,
     # colormap
     #'image.cmap':'viridis'
+    'axes.facecolor': 'white'   # axes background color
 }
 plt.rcParams.update(params)
 today = datetime.datetime.now()
